@@ -25,12 +25,15 @@ Capybara.server = :thruster
 # You can also specify some options.
 
 # For example, if you want to see the server output,
-# pass the `debug: true` option
+# pass the `debug: true` option:
 Capybara.server = :thruster, {debug: true}
 
 # To customize the server settings, you can pass arbitrary environment
-# variables via the `env` option
+# variables via the `env` option:
 Capybara.server = :thruster, {env: {"DEBUG" => "true"}}
+
+# To specify Puma server options, use the `puma_options` option:
+Capybara.server = :thruster, {puma_options: {Silent: false}}
 ```
 
 ## Contributing

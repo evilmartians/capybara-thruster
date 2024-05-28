@@ -8,7 +8,6 @@ require "capybara"
 Capybara.register_server :thruster do |app, port, host, **options|
   puma_port = port + 1
 
-  # TODO: Figure out how to avoid sleep here
   process = ChildProcess.build("bundle", "exec", "thrust", "ruby", "-e", "sleep")
   process.environment["TARGET_PORT"] = puma_port.to_s
   process.environment["HTTP_PORT"] = port.to_s
@@ -21,5 +20,6 @@ Capybara.register_server :thruster do |app, port, host, **options|
 
   at_exit { process.stop }
 
-  Capybara.servers[:puma].call(app, puma_port, host)
+  puma_options = options.fetch(:puma_options, {Silent: true})
+  Capybara.servers[:puma].call(app, puma_port, host, **puma_options)
 end

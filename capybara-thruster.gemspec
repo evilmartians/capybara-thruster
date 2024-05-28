@@ -25,10 +25,13 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.required_ruby_version = ">= 2.7"
 
+  s.add_dependency "capybara"
   s.add_dependency "childprocess", ">= 4.0"
   s.add_dependency "puma"
 
   s.add_development_dependency "bundler", ">= 1.15"
+  s.add_development_dependency "rackup"
   s.add_development_dependency "rake", ">= 13.0"
   s.add_development_dependency "minitest", "~> 5.0"
+  s.add_development_dependency "thruster"
 end
