@@ -1,0 +1,4 @@
+bump:
+  file: lib/capybara/thruster/version.rb
+  skip_ci: true
+
