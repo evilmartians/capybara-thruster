@@ -5,7 +5,7 @@
 
 This gem makes it possible to use [Thruster][] as a Capybara server. Run your browser test with HTTP/2 enabled and static assets served via Thruster for faster load times!
 
-> [TIP!]
+> [!TIP]
 > Using AnyCable? This gem works with [AnyCable-d Thruster][anycable-thruster], so you can run your system tests against a real AnyCable server with all its features!
 
 ## Getting started
