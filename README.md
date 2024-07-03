@@ -10,6 +10,18 @@ This gem makes it possible to use [Thruster][] as a Capybara server. Run your br
 
 ## Getting started
 
+### Prerequisites
+
+Before adding the gem to your project, ensure you have either `thruster` or `anycable-thruster` installed. You can add one of these gems to your `Gemfile`:
+
+```ruby
+# For thruster
+gem "thruster"
+
+# or for anycable-thruster
+gem "anycable-thruster"
+```
+
 Adding the gem to your project:
 
 ```ruby

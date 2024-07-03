@@ -2,6 +2,10 @@
 
 require "childprocess"
 require "capybara"
+require "capybara/dependency_checker"
+require "rack/handler"
+
+Capybara::Thruster::DependencyChecker.call
 
 # Replaces the default Puma server on CAPYBARA_SERVER_PORT port with Thruster server.
 # Requests are proxied to the Puma server running on the internal port (CAPYBARA_SERVER_PORT + 1).
