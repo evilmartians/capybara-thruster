@@ -20,8 +20,6 @@ jobs:
         ruby: ["3.3"]
         include:
           - os: ubuntu-latest
-            ruby: 2.7
-          - os: ubuntu-latest
             ruby: 3.0
           - os: ubuntu-latest
             ruby: 3.2
