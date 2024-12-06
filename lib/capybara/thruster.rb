@@ -3,7 +3,6 @@
 require "childprocess"
 require "capybara"
 require "capybara/dependency_checker"
-require "rack/handler"
 
 Capybara::Thruster::DependencyChecker.call
 
